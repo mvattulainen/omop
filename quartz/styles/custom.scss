@@ -1,3 +1,74 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// OMOP vault presentation refinements.
+
+:root {
+  --omop-panel: color-mix(in srgb, var(--light) 92%, var(--secondary) 8%);
+}
+
+article {
+  line-height: 1.66;
+}
+
+article > h1 {
+  letter-spacing: -0.025em;
+  margin-bottom: 0.8rem;
+}
+
+article h2 {
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.3rem;
+}
+
+article table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--lightgray);
+  border-radius: 0.55rem;
+  overflow: hidden;
+}
+
+article thead {
+  background: var(--omop-panel);
+}
+
+article th {
+  color: var(--dark);
+  font-weight: 650;
+}
+
+article th,
+article td {
+  border-bottom: 1px solid var(--lightgray);
+  padding: 0.62rem 0.72rem;
+  vertical-align: top;
+}
+
+article tr:last-child td {
+  border-bottom: 0;
+}
+
+article code {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.28rem;
+  padding: 0.08rem 0.28rem;
+}
+
+article pre code {
+  border: 0;
+  padding: 0;
+}
+
+.page-title a {
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+@media all and ($mobile) {
+  article table {
+    display: block;
+    overflow-x: auto;
+  }
+}

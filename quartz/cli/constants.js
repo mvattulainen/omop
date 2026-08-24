@@ -11,6 +11,8 @@ export const QUARTZ_SOURCE_REPO = "https://github.com/jackyzha0/quartz.git"
 export const cwd = process.cwd()
 export const cacheDir = path.join(cwd, ".quartz-cache")
 export const cacheFile = "./quartz/.quartz-cache/transpiled-build.mjs"
-export const fp = "./quartz/build.ts"
+// An absolute entry point keeps esbuild 0.27 on Windows from interpreting
+// the Quartz build module as a package path.
+export const fp = path.join(cwd, "quartz", "build.ts")
 export const { version } = JSON.parse(readFileSync("./package.json").toString())
 export const contentCacheFolder = path.join(cacheDir, "content-cache")

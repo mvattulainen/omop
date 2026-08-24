@@ -1,0 +1,13 @@
+release_id: 0.1.0-draft
+release_date: 2026-08-23
+source_data_version: 1.0.0
+source_cutoff: documentation-fixture-complete
+omop_cdm_version: "5.4"
+vocabulary_snapshot: UNPINNED-DOCUMENTATION
+transformation_version: 0.1.0-draft
+mapping_version: 0.1.0-draft
+quality_status: documentation-assertions-defined
+production_eligible: false
+known_issues:
+  - Exact vocabulary concept identifiers require a pinned snapshot.
+  - Executable ETL is outside this documentation release.
